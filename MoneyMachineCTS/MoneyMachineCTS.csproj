@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45942EA0-A819-4FD1-AE87-9823E76B3215}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MoneyMachineCTS</RootNamespace>
+    <AssemblyName>FollowTradingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MoneyMachineSkins, Version=20.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\MoneyMachineSkins.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountBalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountBalanceForm.Designer.cs">
+      <DependentUpon>AccountBalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementForm.Designer.cs">
+      <DependentUpon>AgreementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuySellCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuySellCheckForm.Designer.cs">
+      <DependentUpon>BuySellCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuySellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuySellForm.Designer.cs">
+      <DependentUpon>BuySellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigPasswordForm.designer.cs">
+      <DependentUpon>ConfigPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_eBestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_eBestForm.Designer.cs">
+      <DependentUpon>Login_eBestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserData.cs" />
+    <Compile Include="WarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarningForm.Designer.cs">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldForm.Designer.cs">
+      <DependentUpon>YieldForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountBalanceForm.resx">
+      <DependentUpon>AccountBalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementForm.resx">
+      <DependentUpon>AgreementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuySellCheckForm.resx">
+      <DependentUpon>BuySellCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuySellForm.resx">
+      <DependentUpon>BuySellForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigPasswordForm.resx">
+      <DependentUpon>ConfigPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_eBestForm.resx">
+      <DependentUpon>Login_eBestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarningForm.resx">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldForm.resx">
+      <DependentUpon>YieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_kakao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kakao_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cs_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auto_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CDPCQ04700.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CDPCQ04700_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChartExcel.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChartExcel_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChartIndex.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChartIndex_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLNAQ00100.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLNAQ00100_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ00600.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ00600_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ12200.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ12200_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ12300.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ12300_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ13700.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ13700_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ22200.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAQ22200_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAT00600.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAT00600_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAT00700.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAT00700_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAT00800.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSPAT00800_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FOCCQ33600.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FOCCQ33600_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K1_.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K1__1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K3_.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K3__1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S2_.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S2__1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S3_.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S3__1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S4_.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S4__1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC0.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC0_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC1_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC2_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC3.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC3_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC4.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC4_1.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0150.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0150_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0151.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0151_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0167.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0167_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0424.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0424_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0425.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t0425_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1101.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1101_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1102.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1102_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1308.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1308_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1310.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1310_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1403.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1403_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1404.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1404_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1405.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1405_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1410.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1410_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1411.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1411_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1422.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1422_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1427.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1427_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1442.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1442_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1444.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1444_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1449.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1449_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1809.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1809_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1857.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1857_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t2101.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t2101_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8430.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8430_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8435.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8435_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8436.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8436_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8437.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t8437_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9943.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9943_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9944.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9944_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9945.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9945_2.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eBestAPI\Innosys.csproj">
+      <Project>{edba83dc-f9fd-4c83-9d0f-2f22332d8561}</Project>
+      <Name>Innosys</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\money_plan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="XA_DATASETLib">
+      <Guid>{CAA15009-CF22-4D1D-AF40-093DBC5A6A0F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="XA_SESSIONLib">
+      <Guid>{F5CC65C5-2965-451B-A6C4-CBC7B8B4AE08}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>RD /S /Q "$(TargetDir)de"
+RD /S /Q "$(TargetDir)es"
+RD /S /Q "$(TargetDir)ja"
+RD /S /Q "$(TargetDir)ru"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

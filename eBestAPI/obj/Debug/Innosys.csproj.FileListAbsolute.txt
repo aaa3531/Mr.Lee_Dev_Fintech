@@ -1,0 +1,8 @@
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\bin\Debug\Innosys.dll
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\bin\Debug\Innosys.pdb
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\bin\Debug\Newtonsoft.Json.dll
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\bin\Debug\Newtonsoft.Json.xml
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\obj\Debug\Innosys.csproj.CoreCompileInputs.cache
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\obj\Debug\Innosys.csproj.CopyComplete
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\obj\Debug\Innosys.dll
+D:\9999.Code\MoneyMachineCTS\MoneyMachineCTS\eBestAPI\obj\Debug\Innosys.pdb
